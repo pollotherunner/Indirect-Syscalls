@@ -6,12 +6,13 @@ This is a basic shellcode loader that implements the concept of **Indirect Sysca
 
 ## Features
 
-- Dynamically obtains the **Syscall Number (SSN)** for each function, without relying on hardcoded values.
+- Dynamically obtains the **Syscall Number (SSN)** for each function at runtime, avoiding hardcoded values.
 - Allocates executable memory using `NtAllocateVirtualMemory` via syscall.
 - Copies and decrypts shellcode in memory (simple XOR).
 - Creates threads to execute the shellcode using `NtCreateThreadEx` via syscall.
 - Waits for the thread to finish using `NtWaitForSingleObject`.
 - Avoids direct usage of Windows APIs, increasing stealth against automatic analysis.
+- The shellcode (e.g., Mimikatz) was generated with **Donut** before applying XOR encryption.
 
 ---
 
