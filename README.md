@@ -2,6 +2,8 @@
 
 This is a basic shellcode loader that implements the concept of **Indirect Syscalls** in practice. I developed this while studying antivirus evasion techniques.
 
+> ⚠️ This loader is extremely simple, has no string encryption, and is **not intended for real-world use**. It is only a study project to understand how indirect syscalls work.
+
 ---
 
 ## Features
