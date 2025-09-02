@@ -4,6 +4,8 @@ This is a basic shellcode loader that implements the concept of **Indirect Sysca
 
 > ⚠️ This loader is extremely simple, has no string encryption, and is **not intended for real-world use**. It is only a study project to understand how indirect syscalls work.
 
+![Loader](images/loader.png)
+
 ---
 
 ## Features
@@ -53,6 +55,19 @@ This approach allows a program to invoke kernel functions with minimal user-mode
 - **Avoids antivirus signatures:** Many antiviruses detect well-known API functions (`VirtualAlloc`, `CreateThread`) by their memory signatures.
 - **Bypasses user-mode hooks:** Some security solutions hook Windows APIs. Calling syscalls directly bypasses these hooks.
 - **More stealthy:** The code does not rely on fixed addresses, making it harder for static scanners to identify known shellcode injection patterns.
+
+---
+
+## Demonstration
+
+The images below show examples of this loader running mimikatz shellcode in different antivirus environments.
+> ⚠️ These images are from a previous version of the loader that included some layers of encryption. This current version is extremely simple and for educational purposes only.
+
+**Running on Windows Defender:**  
+![Windows Defender Detection](images/defender.png)
+
+**Running on Malwarebytes:**  
+![Malwarebytes Detection](images/malware_bytes.png)
 
 ---
 
