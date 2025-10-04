@@ -16,7 +16,7 @@ This is a basic shellcode loader that implements the concept of **Indirect Sysca
 - Creates threads to execute the shellcode using `NtCreateThreadEx` via syscall.
 - Waits for the thread to finish using `NtWaitForSingleObject`.
 - Avoids direct usage of Windows APIs, increasing stealth against automatic analysis.
-- The shellcode (e.g., Mimikatz) was generated with **Donut** before applying XOR encryption.
+- The shellcod was generated with **Donut** before applying XOR encryption.
 
 ---
 
